@@ -46,7 +46,7 @@ impl Config {
     Ok(Config { query, filename, ignore_case })
   }
 }
-/// Search Method (not case sensitive)
+/// # Search Method (not case sensitive)
 /// ```
 /// Uses iterator pattern to search the contents of the file for a given query
 /// ```
@@ -57,7 +57,7 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     .collect()
 } 
 
-/// Search Method (case sensitive)
+/// # Search Method (case sensitive)
 /// ```
 /// Uses iterator pattern to search the contents of the file for a given query
 /// ```
