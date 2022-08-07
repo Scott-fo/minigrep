@@ -1,6 +1,10 @@
+//! # Minigrep
+//! Minigrep is a CLI utility to search a file for a given pattern
+
 use std::fs;
 use std::env;
 use std::error::Error;
+
 /// # Structure for the env args passed in
 /// ```
 /// Structure defines the expected keys and types we expect to be passed into this program
