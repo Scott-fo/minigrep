@@ -2,6 +2,7 @@ use std::fs;
 use std::env;
 use std::error::Error;
 /// # Structure for the env args passed in
+/// ```
 /// Structure defines the expected keys and types we expect to be passed into this program
 /// ```
 pub struct Config {
@@ -46,6 +47,7 @@ impl Config {
   }
 }
 /// Search Method (not case sensitive)
+/// ```
 /// Uses iterator pattern to search the contents of the file for a given query
 /// ```
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
@@ -56,6 +58,7 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 } 
 
 /// Search Method (case sensitive)
+/// ```
 /// Uses iterator pattern to search the contents of the file for a given query
 /// ```
 pub fn search_case_insensitive<'a>(
