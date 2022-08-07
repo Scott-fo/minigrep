@@ -54,10 +54,10 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     .filter(|line| line.contains(query))
     .collect()
 } 
+
 /// Search Method (case sensitive)
 /// Uses iterator pattern to search the contents of the file for a given query
 /// ```
-p
 pub fn search_case_insensitive<'a>(
   query: &str,
   contents: &'a str,
