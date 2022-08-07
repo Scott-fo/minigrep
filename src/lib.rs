@@ -1,7 +1,9 @@
 use std::fs;
 use std::env;
 use std::error::Error;
-
+/// # Structure for the env args passed in
+/// Structure defines the expected keys and types we expect to be passed into this program
+/// ```
 pub struct Config {
   pub query: String,
   pub filename: String,
@@ -43,14 +45,19 @@ impl Config {
     Ok(Config { query, filename, ignore_case })
   }
 }
-
+/// Search Method (not case sensitive)
+/// Uses iterator pattern to search the contents of the file for a given query
+/// ```
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
   contents
     .lines()
     .filter(|line| line.contains(query))
     .collect()
 } 
-
+/// Search Method (case sensitive)
+/// Uses iterator pattern to search the contents of the file for a given query
+/// ```
+p
 pub fn search_case_insensitive<'a>(
   query: &str,
   contents: &'a str,
